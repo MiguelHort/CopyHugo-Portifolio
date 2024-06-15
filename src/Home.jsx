@@ -1,13 +1,11 @@
-import { useState } from 'react'
-
-import { CornerDownRight, MoveRight } from 'lucide-react'
+import { CornerDownRight, MoveRight,} from 'lucide-react'
 
 import Logo from './assets/icons/Logo'
 import Instagram from './assets/icons/Instagram'
 import Facebook from './assets/icons/Facebook'
 import Whatsapp from './assets/icons/Whatsapp'
 
-import ImgVictor from './assets/imgs/victor.png'
+import ImgVictor from './assets/imgs/victor1.png'
 
 import Card1 from './components/Card1'
 import Card2 from './components/Card2'
@@ -16,7 +14,10 @@ import Copywriting from './assets/icons/Copywriting'
 import Website from './assets/icons/Website'
 import Carousel from './components/Carousel'
 
+import './index.css'
+
 function App() {
+  
 
   // Primeiro, selecione todos os links âncora que têm '#' em seu href
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -36,7 +37,7 @@ function App() {
     <main className='w-full flex-row'>
 
 
-      <header className='flex w-full justify-center items-center py-5 bg-slate-600 sticky top-0'>
+      <header className='flex w-full justify-center items-center py-5 bg-gray-600 sticky top-0 z-[2]'>
         <div className='flex w-4/5 justify-between items-center'>
           <Logo />
           <nav className='flex gap-8'>
@@ -49,25 +50,25 @@ function App() {
         </div>
       </header>
 
-      <main className='flex flex-col w-full justify-center items-center bg-slate-900'>
+      <main className='flex flex-col w-full justify-center items-center bg-gray-900'>
 
-        <section className='flex w-full justify-center items-center bg-slate-800'>
+        <section className='flex w-full justify-center items-center bg-gray-800'>
           <div className='flex w-4/5 justify-between items-center'>
             <div className='flex flex-col gap-8'>
-              <h1 className='text-white text-4xl font-bold'>Victor Hugo, <br /> <span className='text-blue-500'>CopyWriter</span> & SocialMedia</h1>
+              <h1 className='text-white text-4xl font-bold'>Victor Hugo, <br /> <span className='text-purple-700'>CopyWriter</span> & SocialMedia</h1>
               <p className='text-gray-400'>Sua empresa precisa estar na internet, e <br /> eu posso te ajudar com isso.</p>
               <div className='flex gap-6'>
                 <Facebook />
-                <Instagram />
+                <a href="https://www.instagram.com/copyhugo?igsh=eGtidG8ydjkybDNm" target='_blank'><Instagram /></a>
                 <Whatsapp />
               </div>
-              <button className='w-64 text-white bg-blue-500 py-2 rounded-2xl hover:opacity-70 duration-1000'>Quero me posicionar na internet</button>
+              <button className='w-64 text-white bg-purple-700 py-2 rounded-2xl hover:opacity-70 duration-1000'>Quero me posicionar na internet</button>
             </div>
-            <img className='w-80 mr-32' src={ImgVictor} alt="Imagem de uma Pessoa" />
+            <img className='w-[600px]' src={ImgVictor} alt="Imagem de uma Pessoa" />
           </div>
         </section>
 
-        <section id="Desenvolvimento" className='flex w-full justify-center items-center bg-slate-900 pt-8 pb-20'>
+        <section id="Desenvolvimento" className='flex w-full justify-center items-center bg-gray-900 pt-8 pb-20'>
           <div className='flex-col justify-center items-center w-4/5'>
             <h2 className='text-center text-2xl m-8 text-white'>PROCESSO DE DESENVOLVIMENTO</h2>
             <div className='flex justify-between items-center gap-1'>
@@ -94,9 +95,9 @@ function App() {
           </div>
         </section>
 
-        <div className='w-4/5 h-px bg-slate-800' />
+        <div className='w-4/5 h-px bg-gray-800' />
 
-        <section id="Servicos" className='flex w-full justify-center items-center bg-slate-900 pt-8 pb-20'>
+        <section id="Servicos" className='flex w-full justify-center items-center bg-gray-900 pt-8 pb-20'>
           <div className='flex flex-col justify-center items-center w-4/5'>
             <h2 className='text-center text-2xl mt-8 text-white'>SERVIÇOS QUE OFEREÇO</h2>
             <p className='mb-8 text-xs text-gray-400'>Contratados pontualmente ou fixo em planos</p>
@@ -117,37 +118,21 @@ function App() {
           </div>
         </section>
 
-        <div className='w-4/5 h-px bg-slate-800' />
+        <div className='w-4/5 h-px bg-gray-800' />
 
-        <section id="Resultados" className='flex w-full justify-center items-center bg-slate-900 pt-8 pb-20'>
-          <div className='flex flex-col justify-center items-center w-4/5'>
-            <h2 className='text-center text-2xl m-8 text-white'>RESULTADOS</h2>
-            <div className='flex justify-between gap-8 last:py-8'>
-              <Carousel
-                texto='Victor fez um bom trabalho e não tive nenhum incômodo.'
-                nome='Steve Jobs'
-                empresa='CEO Apple' />
-              <Carousel
-                texto='Victor fez um bom trabalho e não tive nenhum incômodo. '
-                nome='Steve Jobs'
-                empresa='CEO Apple' />
-              <Carousel
-                texto='Victor fez um bom trabalho e não tive nenhum incômodo.'
-                nome='Steve Jobs'
-                empresa='CEO Apple' />
-            </div>
-          </div>
+
+        <section className='flex w-full justify-center items-center bg-gray-900 pt-8 pb-20'>
+          <Carousel />
         </section>
 
 
-
-        <section id="Planos" className='flex w-full justify-center items-center bg-slate-950 pt-8 pb-20'>
+        <section id="Planos" className='flex w-full justify-center items-center bg-gray-950 pt-8 pb-20'>
           <div className='flex flex-col justify-center items-center w-4/5'>
             <h2 className='text-center text-2xl mt-8 text-white'>PLANOS</h2>
             <p className='mb-8 text-xl text-gray-400'>Entre em contato comigo para saber mais</p>
             <div className='flex justify-center items-center justify-between gap-8 text-white'>
               <CornerDownRight />
-              <button className='py-2 px-10 text-xl rounded border-solid border-green-500 border-2 bg-transparent hover:bg-green-500 duration-1000'>Whatsapp</button>
+              <button className='flex gap-2 py-2 px-8 text-xl rounded border-solid border-green-500 border-2 bg-transparent hover:bg-green-500 duration-1000'><Whatsapp />Whatsapp</button>
             </div>
           </div>
         </section>
@@ -161,7 +146,7 @@ function App() {
             </div>
             <div className='flex gap-4'>
               <Facebook />
-              <Instagram />
+              <a href="https://www.instagram.com/copyhugo?igsh=eGtidG8ydjkybDNm" target='_blank'><Instagram /></a>
               <Whatsapp />
             </div>
           </div>
