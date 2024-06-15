@@ -6,3 +6,7 @@ carousel::-webkit-scrollbar {
     display: none; /* Oculta a barra de rolagem do Chrome/Safari */
 }
 
+.slick-slide > div {
+    margin: 0 10px;
+  }
+
