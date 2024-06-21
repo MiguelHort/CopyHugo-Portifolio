@@ -12,7 +12,7 @@ function Carousel() {
     dots: true,
     infinite: true,
     speed: 500,
-    slidesToShow: 3,
+    slidesToShow: (window.innerWidth > 1024 ? 3 : 1),
     slidesToScroll: 1
   };
   return (

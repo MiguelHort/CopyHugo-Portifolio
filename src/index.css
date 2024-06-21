@@ -2,11 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-carousel::-webkit-scrollbar {
-    display: none; /* Oculta a barra de rolagem do Chrome/Safari */
-}
-
-.slick-slide > div {
+.slick-slide>div {
     margin: 0 10px;
-  }
-
+}

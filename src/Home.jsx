@@ -40,7 +40,7 @@ function App() {
       <header className='flex w-full justify-center items-center py-5 bg-gray-600 sticky top-0 z-[2]'>
         <div className='flex w-4/5 justify-between items-center'>
           <Logo />
-          <nav className='flex gap-8'>
+          <nav className='flex gap-8 max-lg:hidden'>
             <a className='text-white hover:opacity-70' href="#Desenvolvimento">Desenvolvimento</a>
             <a className='text-white hover:opacity-70' href="#Servicos">Serviços</a>
             <a className='text-white hover:opacity-70' href="#Trabalhos-realizados">Trabalhos realizados</a>
@@ -53,8 +53,8 @@ function App() {
       <main className='flex flex-col w-full justify-center items-center bg-gray-900'>
 
         <section className='flex w-full justify-center items-center bg-gray-800'>
-          <div className='flex w-4/5 justify-between items-center'>
-            <div className='flex flex-col gap-8'>
+          <div className='flex w-4/5 justify-between items-center max-lg:flex-col'>
+            <div className='flex flex-col gap-8 max-lg:mt-10'>
               <h1 className='text-white text-4xl font-bold'>Victor Hugo, <br /> <span className='text-purple-700'>CopyWriter</span> & SocialMedia</h1>
               <p className='text-gray-400'>Sua empresa precisa estar na internet, e <br /> eu posso te ajudar com isso.</p>
               <div className='flex gap-6'>
@@ -62,7 +62,7 @@ function App() {
                 <a href="https://www.instagram.com/copyhugo?igsh=eGtidG8ydjkybDNm" target='_blank'><Instagram /></a>
                 <Whatsapp />
               </div>
-              <button className='w-64 text-white bg-purple-700 py-2 rounded-2xl hover:opacity-70 duration-1000'>Quero me posicionar na internet</button>
+              <button className='w-64 text-white bg-purple-700 py-2 rounded-2xl hover:opacity-70 duration-1000 max-lg:w-full'>Quero me posicionar na internet</button>
             </div>
             <img className='w-[600px]' src={ImgVictor} alt="Imagem de uma Pessoa" />
           </div>
@@ -71,22 +71,22 @@ function App() {
         <section id="Desenvolvimento" className='flex w-full justify-center items-center bg-gray-900 pt-8 pb-20'>
           <div className='flex-col justify-center items-center w-4/5'>
             <h2 className='text-center text-2xl m-8 text-white'>PROCESSO DE DESENVOLVIMENTO</h2>
-            <div className='flex justify-between items-center gap-1'>
+            <div className='flex justify-between items-center gap-1 max-lg:flex-col'>
               <Card1
                 numero='1'
                 palavra='Start'
                 texto='Reunião de branding e briefing (entender os valores da marca, comunicação, diferenciais, elementos de autoridade, público-alvo, a mensagem que a marca quer transmitir).' />
-              <MoveRight className='w-40 stroke-white' />
+              <MoveRight className='w-40 stroke-white max-lg:hidden' />
               <Card1
                 numero='2'
                 palavra='Padronização'
                 texto='Alinhamento do estilo das artes que serão publicadas no perfil da empresa.' />
-              <MoveRight className='w-40 stroke-white' />
+              <MoveRight className='w-40 stroke-white max-lg:hidden' />
               <Card1
                 numero='3'
                 palavra='Especificação'
                 texto='Definição dos produtos e serviços que serão trabalhados em campanhas.' />
-              <MoveRight className='w-40 stroke-white' />
+              <MoveRight className='w-40 stroke-white max-lg:hidden' />
               <Card1
                 numero='4'
                 palavra='Amplifiação'
@@ -101,7 +101,7 @@ function App() {
           <div className='flex flex-col justify-center items-center w-4/5'>
             <h2 className='text-center text-2xl mt-8 text-white'>SERVIÇOS QUE OFEREÇO</h2>
             <p className='mb-8 text-xs text-gray-400'>Contratados pontualmente ou fixo em planos</p>
-            <div className='flex justify-between gap-8'>
+            <div className='flex justify-between gap-8 max-lg:flex-col'>
               <Card2
                 icone={<Socialmedia />}
                 palavra='Social Media'
